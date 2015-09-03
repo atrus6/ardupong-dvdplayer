@@ -1,0 +1,108 @@
+<html>
+<head>
+  <link href='better.css' rel='stylesheet'></link>
+</head>
+<body>
+  <h1>Pong on a DVD player</h1>
+  <p>A while ago, I had a spare Arduino laying around, along with a portable DVD player,
+  and so I decided to merge them together, and create a Pong machine using the two.
+
+  Sadly, this project was several years ago, and both the DVD player and the video of the
+  completed project have been lost through 3 moves. I do however have my build pictures,
+  and the source, so I can at least share that. You can click on any of the images for
+  a full sized version.</p>
+
+  <a href='img/front_view.jpg'><img src='img/front_view_thumb.jpg' alt='Front View.'></a>
+
+  <p>So, as we can see, it's a pretty standard DVD player. Widescreen 480p. What
+  made this project easier was the fact that it had a composite input. Since
+  an Arduino can output a composite signal pretty easily, that combined with Pong
+  was a perfect little project to attempt.</p>
+
+  <a href='img/opened.jpg'><img src='img/opened_thumb.jpg' alt='Opened Up.'></a>
+
+  <p>Essentially I'd be making my own Nintendo DS, just bigger, heavier and with
+  only one game. The control would be the stop/pause/ff/rw buttons, with the
+  play button starting and restarting the game.
+
+  The pause and stop buttons would move your paddle up and down. The ff/rw buttons
+  would increase and decrease the difficulty of the AI that you would be playing
+  against.</p>
+
+  <a href='img/arduino_hookup.jpg'><img src='img/arduino_hookup_thumb.jpg' alt='The Arduino hooked up on a breadboard.'></a>
+
+  <p>A quick initial setup to make sure that it all worked, before I started tearing
+  it all up. Using a sacrificial cable, I could plug the Arduino into the DVD
+  player and it would play Pong. I used this time to made the right side AI
+  controlled. Before starting a round, you could increase the difficulty of the
+  AI. Instead of trying to be fancy, I simply allowed the AI to move faster.
+  It's remarkably simple getting a composite signal out.</p>
+
+  <a href='img/opened_up.jpg'><img src='img/opened_up_thumb.jpg' alt='The DVD player opened up.'></a>
+
+  <p>And here it is opened up. One of the goals was to make it look 'whole' again,
+  so the DVD reading mechanism would be removed, and the Arduino would be put back in
+  its place.</p>
+
+  <a href='img/opened_no_dvd.jpg'><img src='img/opened_no_dvd_thumb.jpg' alt='The opened DVD player with no DVD carriage.'></a>
+
+  <p>And there is plenty of room without the dvd carriage in there.</p>
+
+  <a href="img/video_hijack.jpg"><img src='img/video_hijack_thumb.jpg' alt='Soldered wires hijacking the composite input.'></a>
+
+  <p>The first major step was allowing the Arduino to output on the composite lines
+  without actually plugging into the jack. So I soldered some wires on the pads.
+  The pads were determined through trial and error.</p>
+
+  <a href='img/ground_cheat.jpg'><img src='img/ground_cheat_thumb.jpg' alt='An ugly hack stabilizing video input.'></a>
+
+  <p>However, it wasn't a very stable image. It would flicker from the DVD menu, to
+  the composite output. For some reason tying these three pads together made it
+  stable. This was discovered by accident while measuring continuities between
+  pads and noticing how it flip flopped less when certain pads were being checked.
+  It's ugly as hell, but that's what covers are for, no?</p>
+
+  <a href="img/power_lines.jpg"><img src='img/power_lines_thumb.jpg' alt='Attaching power lines for the Arduino.'></a>
+
+  <p>Since I wanted this to be completely self-contained, I needed a way to power
+  the Arduino, without extra wires. Luckily for me, the input power for the DVD
+  player was at a safe range for the Arduino, so I could simply tap straight into
+  it.</p>
+
+  <a href='img/pretty_wires.jpg'><img src='img/pretty_wires_thumb.jpg' alt='Looking better with the main board in place.'></a>
+
+  <p>And look how nice that solder job looks after the main board is put back! There
+  are no problems if you can't see them /s. Again, it's kinda cool that two wires
+  are needed for video output. There are more wires for the controls!</p>
+
+  <a href="img/buttons_front.jpg"><img src='img/buttons_front_thumb.jpg' alt='The front view of the button board.'></a>
+  <a href="img/buttons_back.jpg"><img src='img/buttons_back_thumb.jpg' alt='The back view of the button board.'></a>
+
+  <p>This was a pretty simple board to decipher. Thankfully I didn't need to do any
+  more 'ground cheats' with this one.</p>
+
+  <a href='img/button_wires.jpg'><img src='img/button_wires_thumb.jpg' alt='All the wires soldered up on the button board.'></a>
+
+  <p>Here I soldered some extensions to the wires. I kept track of which wire went
+  where simply by the order, as it was a ribbon cable. I really wish that I had
+  taken a picture of it all connected before I closed the case, but I forgot to
+  take pictures as I neared the end of the project.</p>
+
+  <a href='img/pong_running.jpg'><img src='img/pong_running_thumb.jpg' alt='Pong running.'></a>
+
+  <p>And here we see it running. This was a pretty neat weekend project, it certainly
+  put a smile on my face.</p>
+
+  <p>
+  I would like to thank:<br>
+  <a href='http://www.instructables.com/id/Ardu-pong-the-Arduino-based-pong-console/'>
+  Ardu-pong!</a> for giving nice instructions on pong with the Arduino. This made
+  the whole enterprise so much easier.
+  </p>
+
+  <p>
+  and also:<br>
+  <a href='http://bettermotherfuckingwebsite.com/'>Better Mother Fucking Website.
+  </a> because I <em>don't</em> need 10MiB of js to make a site look okay.
+  </p>
+</body>
